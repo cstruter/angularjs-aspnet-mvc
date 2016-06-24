@@ -1,0 +1,28 @@
+﻿@using CSTruter.Models
+
+@model PersonViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" ng-controller="PersonController as person">
+
+    @using (Html.BeginForm("Edit", "Home", FormMethod.Post,
+        new
+        {
+            name = "form",
+            @class = "form-horizontal",
+            novalidate = "",
+            role = "form",
+            ng_submit = "person.save($event, form.$valid)"
+        }))
+    {
+        @Html.EditorFor(m => m.Email)
+        @Html.EditorFor(m => m.FirstName)
+        @Html.EditorFor(m => m.LastName)
+        @Html.EditorFor(m => m.Gender, "SelectList", new { Items = new SelectList(ViewBag.Genders, "id", "text") })
+        @Html.EditorFor(m => m.Age)
+        @Html.Partial("_SubmitButton")
+    }
+
+</div> 
