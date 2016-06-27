@@ -4,7 +4,7 @@
 		.module('app', [
 			'ngMessages',
             'ui.bootstrap',
-            'cstruter.validation',
+            'cstruter.validate.unobtrusive',
             'app.person'
 		]);
 

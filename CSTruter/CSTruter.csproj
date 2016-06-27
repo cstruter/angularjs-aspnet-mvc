@@ -126,7 +126,7 @@
     <Content Include="Content\app.css" />
     <Content Include="Global.asax" />
     <Content Include="app\app.module.js" />
-    <Content Include="Scripts\cstruter\cstruter.validation.js" />
+    <Content Include="Scripts\cstruter\cstruter.validate.unobtrusive.js" />
     <Content Include="app\people\person.controller.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Shared\EditorTemplates\EmailAddress.cshtml" />
@@ -162,6 +162,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSTruter.Web.Mvc\CSTruter.Web.Mvc.csproj">
+      <Project>{e4ee3c8d-27a8-4047-8fef-fe8981cb2c2c}</Project>
+      <Name>CSTruter.Web.Mvc</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

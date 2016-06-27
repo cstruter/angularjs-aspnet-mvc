@@ -3,7 +3,11 @@
 <div class="form-group">
     @Html.LabelFor(m => m, new { @class = "control-label col-sm-2" })
     <div class="col-sm-6">
-        @Html.DropDownListFor(m => m, (IEnumerable<SelectListItem>)ViewData["Items"], "- Please Select -",
-            new { @class = "form-control", ng_model = ViewData.TemplateInfo.HtmlFieldPrefix })
+        @Html.DropDownListFor(m => m, (IEnumerable<SelectListItem>)ViewData["Items"], "- Please Select -", new
+        {
+            @class = "form-control",
+            ng_model = ViewData.TemplateInfo.HtmlFieldPrefix
+        })
+        @Html.ValidationAngularMessageFor(m => m)
     </div>
 </div>

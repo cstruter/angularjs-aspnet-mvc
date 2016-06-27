@@ -1,9 +1,5 @@
 ﻿using CSTruter.Models;
 using CSTruter.Models.Repositories.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CSTruter.Controllers

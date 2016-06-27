@@ -29,7 +29,7 @@ namespace CSTruter
                         "~/Scripts/angular-ui/ui-bootstrap.js"
                     )
                     .Include( // Reusable modules
-                        "~/Scripts/cstruter/cstruter.validation.js"
+                        "~/Scripts/cstruter/cstruter.validate.unobtrusive.js"
                     )
                     .Include( // Application Specific
                         "~/app/app.module.js",
