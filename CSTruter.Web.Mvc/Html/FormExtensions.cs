@@ -9,10 +9,10 @@ namespace CSTruter.Web.Mvc.Html
         public static MsAspMvc.MvcForm BeginAngularForm(this HtmlHelper htmlHelper, string actionName, string controllerName, FormMethod method, object htmlAttributes)
         {
             RouteValueDictionary routeValues = HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes);
-            if (!routeValues.ContainsKey("form"))
-                routeValues.Add("form", "form");
+            if (!routeValues.ContainsKey("name"))
+                routeValues.Add("name", "form");
 
-            htmlHelper.ViewData.Add("formName", routeValues["form"]);
+            htmlHelper.ViewData.Add("formName", routeValues["name"]);
             return MsAspMvc.FormExtensions.BeginForm(htmlHelper, actionName, controllerName, method, routeValues);
         }
     }

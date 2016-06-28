@@ -27,7 +27,7 @@ namespace CSTruter.Web.Mvc.Html
             foreach (ModelClientValidationRule rule in validators)
             {
                 TagBuilder ngMessage = new TagBuilder("div");
-                ngMessages.AddCssClass("error");
+                ngMessage.AddCssClass("error");
                 if (rule.ValidationType == "regex")
                     ngMessage.Attributes.Add("ng-message", "pattern");
                 else if (rule.ValidationType == "length" || rule.ValidationType == "range")
