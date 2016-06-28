@@ -7,8 +7,8 @@
     function validation($compile) {
         return {
             restrict: 'A',
-            require: ['^form', 'ngModel'],
-            link: function (scope, element, attrs, controller) {
+            require: 'ngModel',
+            link: function (scope, element, attrs) {
 
                 // Make DOM changes
                 setAttributes(element, attrs);
